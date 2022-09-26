@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <input type="text" id="ngay" >
+   <input type="button" value="Tính số ngày" onclick="showDate()">
+   <p id="ketqua">đây là kết quả</p>
+</body>
+  <script>
+    function showDate() {
+        month = +document.getElementById('ngay').value
+        switch(month){
+
+        case
+            1
+        :
+        case
+            3
+        :
+        case
+            5
+        :
+        case
+            7
+        :
+        case
+            8
+        :
+        case
+            10
+        :
+        case 12
+        :
+            document.getElementById("ketqua").innerHTML = "tháng này có 31 ngày"
+            break;
+        case
+            2
+        :
+            document.getElementById("ketqua").innerHTML = "tháng này có 28 hoặc 29 ngày"
+            break;
+        case
+            4
+        :
+        case
+            6
+        :
+        case
+            9
+        :
+            document.getElementById("ketqua").innerHTML = "tháng này có 30 ngày"
+            break;
+        default :
+            document.getElementById("ketqua").innerHTML = "đây không phaỉ tháng trong năm"
+
+        }
+
+
+
+    }
+  </script>
+</html>
