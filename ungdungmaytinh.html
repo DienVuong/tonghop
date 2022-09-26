@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <form>
+       <table>
+           <tbody>
+              <tr>
+                 <td colspan="2">
+                     <label>
+                         <input type="number" name="firstNumber" id="firstNumber">
+                     </label>
+                 </td>
+                  <td colspan="2">
+                      <label><input type="number" name="secondNumber" id="secondnumber"></label>
+                  </td>
+              </tr>
+              <tr>
+                  <td><button type="button" onclick="showResultAdd()">Addition(+)</button></td>
+                  <td><button type="button" onclick="showResultSub()">Subtraction</button></td>
+                  <td><button type="button" onclick="showResultMulti()">Multiplication(x)</button></td>
+                  <td><button type="button" onclick="showResultDiv()">Division(/)</button></td>
+              </tr>
+           </tbody>
+       </table>
+       <div id="result"></div>
+   </form>
+</body>
+    <script>
+        function showResultAdd(){
+            let firstNumber = +document.getElementById('firstNumber').value;
+            let secondNumber = +document.getElementById("secondnumber").value;
+            let result = firstNumber + secondNumber;
+            document.getElementById("result").innerHTML = "ResultAddtion: " + result;
+        }
+        function showResultSub(){
+            let firstNumber = +document.getElementById('firstNumber').value;
+            let secondNumber = +document.getElementById("secondnumber").value;
+            let result = firstNumber - secondNumber;
+            document.getElementById("result").innerHTML = "ResultSubtraction: " + result;
+        }
+        function showResultMulti(){
+            let firstNumber = +document.getElementById('firstNumber').value;
+            let secondNumber = +document.getElementById("secondnumber").value;
+            let result = firstNumber * secondNumber;
+            document.getElementById("result").innerHTML = "ResultMultiptication: " + result;
+        }
+        function showResultDiv(){
+            let firstNumber = +document.getElementById('firstNumber').value;
+            let secondNumber = +document.getElementById("secondnumber").value;
+            let result = firstNumber / secondNumber;
+            document.getElementById("result").innerHTML = "ResultDivision: " + result;
+        }
+    </script>
+</html>
